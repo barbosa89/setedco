@@ -42,7 +42,7 @@
             "name": "{{ config('app.name') }}",
             "alternateName": "{{ config('app.fullname') }}",
             "url": "{{ config('app.url') }}",
-            "image": "{{ asset('theme/images/logo.png') }}",
+            "image": "{{ asset('theme/images/icon.png') }}",
             "description": "Description"
         }
     </script>
