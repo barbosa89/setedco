@@ -14,7 +14,7 @@
 
     <meta property="og:title" content="{{ config('app.name') }} - {{ config('app.fullname') }}">
     <meta property="og:description" content="CCTV, sistemas electrónicos de seguridad, telecomunicaciones, redes eléctricas, generadores de energía, automatización y control, consultoría, asesorías, energía solar fotovoltaica.">
-    <meta property="og:image" content="{{ asset('theme/images/logo.png') }}">
+    <meta property="og:image" content="{{ asset('theme/images/icon.png') }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:site_name" content="{{ config('app.name') }}">
