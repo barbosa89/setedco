@@ -5,13 +5,13 @@
     <header>
         <div class="container pt-4">
             <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-0">
-                <a class="text-white navbar-brand" href="#">
-                <img src="theme/images/logo.png" alt="" class="img-fluid" width="200">
+                <a class="text-white navbar-brand" href="{{ url('/') }}">
+                    <img src="theme/images/logo.png" alt="" class="img-fluid" width="200">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#da-navbarNav" aria-controls="da-navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse text-uppercase" id="da-navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="{{ url('/') }}#">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#team">Equipo</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#gallery">Proyectos</a></li>
