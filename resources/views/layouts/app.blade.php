@@ -9,7 +9,7 @@
     <link rel="canonical" href="{{ config('app.url') }}">
 
     <meta name="description" content="CCTV, sistemas electrónicos de seguridad, telecomunicaciones, redes eléctricas, generadores de energía, automatización y control, energía solar fotovoltaica.">
-    <meta name="keywords" content="CCTV, sistemas de seguridad, redes, telecomunicaciones, mantenimiento a computador, mantenimiento a impresoras, redes eléctricas, generadores de energía, energía solar fotovoltaica, instalaciones eléctricas,  tableros de distribución, sistemas puestas a tierra, transformadores eléctricos, variadores de velocidad,  motores eléctricos, plantas eléctricas, bombas, aires acondicionados ">
+    <meta name="keywords" content="CCTV, sistemas de seguridad, redes, telecomunicaciones, mantenimiento a computador, mantenimiento a impresoras, redes eléctricas, generadores de energía, energía solar fotovoltaica, instalaciones eléctricas,  tableros de distribución, sistemas puestas a tierra, transformadores eléctricos, variadores de velocidad,  motores eléctricos, plantas eléctricas, bombas, aires acondicionados, energía solar, tecnología, aliados, empresas, soluciones, eléctricas, clientes, red, resultados, seguridad, hogares, servicios, montaje, control, experiencia, proyectos, contacto, equipo">
     <meta name="author" content="{{ config('app.name') }} - {{ config('app.fullname') }}">
 
     <meta property="og:title" content="{{ config('app.name') }} - {{ config('app.fullname') }}">
