@@ -8,12 +8,12 @@
     <link href="{{ asset('theme/images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
     <link rel="canonical" href="{{ config('app.url') }}">
 
-    <meta name="description" content="Description">
-    <meta name="keywords" content="Keywords">
+    <meta name="description" content="CCTV, sistemas electrónicos de seguridad, telecomunicaciones, redes eléctricas, generadores de energía, automatización y control, consultoría, asesorías, energía solar fotovoltaica.">
+    <meta name="keywords" content="CCTV, sistemas de seguridad, redes, telecomunicaciones, mantenimiento a computador, mantenimiento a impresoras, redes eléctricas, generadores de energía, consultoría, asesorías, energía solar fotovoltaica, instalaciones eléctricas,  tableros de distribución, sistemas puestas a tierra, transformadores eléctricos, variadores de velocidad,  motores eléctricos, plantas eléctricas, bombas, aires acondicionados ">
     <meta name="author" content="{{ config('app.name') }} - {{ config('app.fullname') }}">
 
     <meta property="og:title" content="{{ config('app.name') }} - {{ config('app.fullname') }}">
-    <meta property="og:description" content="Description">
+    <meta property="og:description" content="CCTV, sistemas electrónicos de seguridad, telecomunicaciones, redes eléctricas, generadores de energía, automatización y control, consultoría, asesorías, energía solar fotovoltaica.">
     <meta property="og:image" content="{{ asset('theme/images/logo.png') }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ config('app.url') }}">
@@ -43,7 +43,7 @@
             "alternateName": "{{ config('app.fullname') }}",
             "url": "{{ config('app.url') }}",
             "image": "{{ asset('theme/images/icon.png') }}",
-            "description": "Description"
+            "description": "CCTV, sistemas electrónicos de seguridad, telecomunicaciones, redes eléctricas, generadores de energía, automatización y control, consultoría, asesorías, energía solar fotovoltaica."
         }
     </script>
     <!-- Smartsupp Live Chat script -->
