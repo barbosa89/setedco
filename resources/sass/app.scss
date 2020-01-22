@@ -12,34 +12,6 @@
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
-.navbar-laravel {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-ul#phones-numbers li a {
-    width: 100% !important;
-    color: #212529 !important;
-    background-color: transparent !important;
-}
-
-.btn-green {
-    background-color: #009641 !important;
-    border-color: #009641 !important;
-}
-
-.text-green {
-    color: #009641 !important;
-}
-
-.text-purple {
-    color: purple !important;
-}
-
-.policy {
-    border-radius: 5px;
-    transition: 0.7s;
-    .policy-text {
-        height: 100px;
-    }
+.bg-secondary {
+    background-color: #487aa9 !important;
 }

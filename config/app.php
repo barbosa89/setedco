@@ -13,7 +13,9 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Seted.co'),
+
+    'fullname' => 'Soluciones eléctricas y tecnológicas S.A.S.',
 
     /*
     |--------------------------------------------------------------------------

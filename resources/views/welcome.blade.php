@@ -1,930 +1,496 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name') }} - Transportes logísticos y servicios de ingeniería</title>
-    <link href="{{ asset('theme/images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
-    <link rel="canonical" href="{{ config('app.url') }}">
+@extends('layouts.app')
 
-    <meta name="description" content="Empresa de transporte, carga líquida y seca, suministro de busetas, camionetas, maquinaria, auxiliares viales, y servicios de ingeniería en asesoría, formulación y evaluación de proyectos.">
-    <meta name="keywords" content="empresa, transporte, carga, carga líquida, carga seca, cama baja, camabaja, camionetas, busetas, maquinaria, auxiliares viales, ingeniería civil, ingeniería ambiental, asesoría, formulación, evaluación, proyectos, infraestructura, obras, PMA, MMA, EIA">
-    <meta name="author" content="Transportes logísticos y servicios de ingeniería S.A.S.">
+@section('content')
 
-    <meta property="og:title" content="Transportes logísticos y servicios de ingeniería S.A.S.">
-    <meta property="og:description" content="Empresa de transporte, carga líquida y seca, suministro de busetas, camionetas, maquinaria, auxiliares viales, y servicios de ingeniería en asesoría, formulación y evaluación de proyectos.">
-    <meta property="og:image" content="{{ asset('theme/images/logo.png') }}">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tlsi.com.co/">
-    <meta property="og:site_name" content="TLSI">
-
-    <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ mix('css/tlsi.css') }}">
-    {!! htmlScriptTagJsApi() !!}
-</head>
-<body id="page-top">
-    @include('flash::message')
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" style="width: 130px" href="#page-top">
-                <img class="img-fluid" src="{{ asset('theme/images/logo.png') }}" alt="TLSI">
-            </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portafolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">Conoce</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#team">Ubicación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+    <header>
+        <div class="container pt-4">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-0">
+                <a class="text-white navbar-brand" href="#">
+                <img src="theme/images/logo.png" alt="" class="img-fluid" width="200">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#da-navbarNav" aria-controls="da-navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse text-uppercase" id="da-navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#team">Equipo</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#gallery">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </nav>
-    <!-- Header -->
-    <header class="masthead">
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">¡Bienvenidos a TSLI!</div>
-                <div class="intro-heading text-uppercase">Logística segura</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Conoce más</a>
+        <div class="da-home-page-text" data-aos="fade-right" data-aos-duration="1000">
+            <div class="container">
+                <div class="col-md-10 col-sm-12 px-0 mx-0">
+                    <h2 class="display-3" style="margin-left:-6px; color: rgba(63, 63, 63, 1);">Ingeniería integral</h2>
+                    <h3 class="h5 mt-3" style="color: rgba(63, 63, 63, 1);">{{ config('app.fullname') }} para la empresa y el hogar</h3>
+                    <a class="smooth-scroll btn btn-primary mt-4" href="#learn">Ver más</a>
+                </div>
             </div>
         </div>
     </header>
-    <!-- Services -->
-    <section class="page-section" id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-4">
-                    <h1 class="section-heading text-uppercase">Transportes logísticos y servicios de ingeniería S.A.S.</h1>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Servicios</h2>
-                    <h3 class="section-subheading text-muted">Transporte terrestre e ingeniería con experiencia.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-truck-moving fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Carga líquida y seca</h4>
-                    <p class="text-muted">Transporte de hidrocarburos en tractocamión con tanque, maquinaria y equipo en tractocamión con cama baja.</p>
-                </div>
-
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-shuttle-van fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Busetas</h4>
-                    <p class="text-muted">Transporte del personal (operativo y administrativo) en busetas.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fas fa-truck-pickup fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Camionetas</h4>
-                    <p class="text-muted">Movilización de personal y logística operativa.</p>
-                </div>
-            </div>
-            <div class="row text-center mt-4">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-green"></i>
-                    <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Maquinaria</h4>
-                    <p class="text-muted">Suministro de maquinaria de construcción, línea amarilla o pesada.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-green"></i>
-                    <i class="fas fa-hard-hat fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Ingeniería</h4>
-                    <p class="text-muted">Asesorías  en ingeniería civil y ambiental, PMA, MMA y EIA, formulación y evaluación de proyectos.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x text-green"></i>
-                    <i class="fas fa-road fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Auxiliares viales</h4>
-                    <p class="text-muted">Suministro de personal para el apoyo de la logística en las operaciones viales: Control de flujo vehicular.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Portfolio Grid -->
-    <section class="bg-light page-section" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Portafolio</h2>
-                    <h3 class="section-subheading text-muted">Equipos y maquinaria.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="theme/images/portfolio/truck.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Tractocamión</h4>
-                        <p class="text-muted">Cama bajas y tanques</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="theme/images/portfolio/bus.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Busetas</h4>
-                        <p class="text-muted">Vans - Micro</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="theme/images/portfolio/pickup.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Camionetas</h4>
-                        <p class="text-muted">Pickup</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="theme/images/portfolio/machinery.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Maquinaria</h4>
-                        <p class="text-muted">Línea amarilla</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="theme/images/portfolio/engineer.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Ingeniería</h4>
-                        <p class="text-muted">Asesorías, formulación y evaluación</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="theme/images/portfolio/aux.jpg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Auxiliares</h4>
-                        <p class="text-muted">Control de tráfico</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Policies -->
-    <section class="page-section" id="policies">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Políticas de {{ config('app.name') }}</h2>
-                    <h3 class="section-subheading text-muted">Estamos comprometidos</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4 text-center font-weight-bold">
-                    <div class="policy">
-                        <a href="#" class="btn text-success" data-toggle="modal" data-target="#policy1">
-                            <i class="fas fa-file-contract fa-border fa-5x d-block my-4"></i>
-                        </a>
-                        <div class="d-block policy-text">
-                            <a href="#" class="btn" data-toggle="modal" data-target="#policy1">
-                                <p class="text-dark">Política del sistema integrado de gestión</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 text-center font-weight-bold">
-                    <div class="policy">
-                        <a href="#" class="btn text-info"  data-toggle="modal" data-target="#policy2">
-                            <i class="fas fa-glass-cheers fa-border fa-5x d-block my-4"></i>
-                        </a>
-                        <div class="d-block policy-text">
-                            <a href="#" class="btn" data-toggle="modal" data-target="#policy2">
-                                <p class="text-dark">Política de no alcohol, no drogas, no armas</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 text-center font-weight-bold">
-                    <div class="policy">
-                        <a href="#" class="btn text-danger" data-toggle="modal" data-target="#policy3">
-                            <i class="fas fa-traffic-light fa-5x fa-border d-block my-4"></i>
-                        </a>
-                        <div class="d-block policy-text">
-                            <a href="#" class="btn" data-toggle="modal" data-target="#policy3">
-                                <p class="text-dark">Política de seguridad vial</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4 text-center font-weight-bold">
-                    <div class="policy">
-                        <a href="#" class="btn text-warning" data-toggle="modal" data-target="#policy4"">
-                            <i class="fas fa-car-crash fa-5x fa-border d-block my-4"></i>
-                        </a>
-                        <div class="d-block policy-text">
-                            <a href="#" class="btn" data-toggle="modal" data-target="#policy4"">
-                                <p class="text-dark">Política del uso del cinturón de seguridad</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 text-center font-weight-bold">
-                    <div class="policy">
-                        <a href="#" class="btn text-secondary" data-toggle="modal" data-target="#policy5">
-                            <i class="fas fa-user-clock fa-5x fa-border d-block my-4"></i>
-                        </a>
-                        <div class="d-block policy-text">
-                            <a href="#" class="btn" data-toggle="modal" data-target="#policy5">
-                                <p class="text-dark">Política de regulación de horas de conducción y descanso</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 text-center font-weight-bold">
-                    <div class="policy">
-                        <a href="#" class="btn text-dark" data-toggle="modal" data-target="#policy6">
-                            <i class="fas fa-mobile-alt fa-5x fa-border d-block my-4"></i>
-                        </a>
-                        <div class="d-block policy-text">
-                            <a href="#" class="btn" data-toggle="modal" data-target="#policy6">
-                                <p class="text-dark">Política de no uso de equipos de comunicaciones móviles mientras se labora</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About -->
-    <section class="page-section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Conoce {{ config('app.name') }}</h2>
-                    <h3 class="section-subheading text-muted">Nuestra historia.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="theme/images/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>Año 2017</h4>
-                                    <h4 class="subheading">Inicia el sueño</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA S.A.S , es una empresa de transporte creada el 17 de septiembre de 2017, que surge con el fin de cubrir las necesidades de movilidad de las empresas contratistas y de comunidad de San Martín – Cesar y de sus zonas aledañas en donde se ejecutan proyectos del sector de hidrocarburos, logrando posicionarse como una empresa líder, con un alto compromiso, responsabilidad social  y ambiental que ha servido como soporte fundamental  para las partes interesadas en transportar a sus colaboradores, con la certeza de que han contratado un servicio de calidad, con la experiencia necesaria para cumplir con los requerimientos exigidos, buscando siempre optimizar sus servicios. Formaremos parte del desarrollo industrial de nuestra región ofreciendo el mejor servicio de transporte, seremos los aliados en logística por excelencia.</p>
+    <div class="page-content">
+        <div>
+            <div class="da-section da-work bg-secondary" id="learn">
+                <div class="container">
+                    <div class="h3 pb-3 text-center text-white" data-aos="fade-up">¿Por qué trabajar con nosotros?</div>
+                    <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">La calidad es nuestra identidad, por lo cual enfocamos el desarrollo de la operación en tres pilares fundamentales para alcanzar el más alto grado de confiabilidad.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-3" data-aos="flip-left">
+                                <div class="card-body mt-4 mb-1 text-center">
+                                    <i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
+                                    <div class="h4 pb-3">Experiencia</div>
+                                    <p>El equipo posee amplia experiencia y conocimientos en las áreas de nuestra operación, somos una empresa de alta fiabilidad.</p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="theme/images/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2019-2020</h4>
-                                    <h4 class="subheading">Rumbo a la consolidación</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Han sido años duros pero con mucho aprendizaje, los cuales nos han permitido perfeccionar nuestra operación. Lo más importante ha sido la satisfacción de nuestros clientes y aliados, es por ello que para el 2020 queremos ser una empresa líder en el transporte de carga líquida y seca en el mercado nacional, con un alto grado de confiabilidad y honestidad, resaltando el compromiso por contribuir y aportar al desarrollo de nuestro país.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3" data-aos="zoom-in-up">
+                                <div class="card-body mt-4 mb-1 text-center">
+                                    <i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
+                                    <div class="h4 pb-3">Flexibilidad</div>
+                                    <p>Nos adaptamos a la operación de los clientes para facilitar la ejecución de las actividades y garantizar la continuidad de los procesos.</p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Se parte
-                                    <br>de nuestra
-                                    <br>Historia!
-                                </h4>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3" data-aos="flip-right">
+                                <div class="card-body mt-4 mb-1 text-center">
+                                    <i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
+                                    <div class="h4 pb-3">Resultados</div>
+                                    <p>Nuestro trabajo es efectivo, sin interrumpir el normal transcurrir del día a día, entregando el mejor resultado en el menor tiempo posible.</p>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Team -->
-    <section class="bg-light page-section" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-4">
-                    <h2 class="section-heading text-uppercase">Ubicación</h2>
-                </div>
-            </div>
-            <div class="row">
-                <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.9570014311225!2d-73.51637768551282!3d8.00337149423631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5d7d6b70f32465%3A0xcc969f3ca4772b27!2sTLSI%3A%20Trasportes%20Log%C3%ADsticos%20y%20Servicios%20de%20Ingenier%C3%ADa%20s.a.s!5e0!3m2!1ses!2sco!4v1575733422834!5m2!1ses!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-        </div>
-    </section>
-    <!-- Clients -->
-    <section class="my-2" style="padding: 0 0 50px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-4">
-                    <h2 class="section-heading text-uppercase">Clientes</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/ecopetrol.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/bureau.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/gtec.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/mt.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/ca.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/copower.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/independece.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/insergroup.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/locargo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/multiservicios.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/sgi.png" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6 mt-4">
-                    <a>
-                    <img class="img-fluid d-block mx-auto" src="theme/images/logos/t.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact -->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Contacto</h2>
-                    <h3 class="section-subheading text-white">Escríbenos y hagamos equipo.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="{{ route('contact') }}">
-                        @csrf
-
+            <div class="da-section bg-light" id="services">
+                <div class="da-services">
+                    <div class="container text-center">
+                        <div class="h3 pb-5 text-center" data-aos="fade-up">Nuestros servicios</div>
+                        <p class="px-5 pb-5 text-center" data-aos="fade-up">Nuestra operación se enfoca hacia cuatro frentes de trabajo claramente establecidos y sobre los cuales somos especialistas.</p>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input class="form-control" id="name" name="name" type="text" placeholder="Tu nombre *" required="required" data-validation-required-message="Por favor ingresa tu nombre.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="email" name="emal" type="email" placeholder="Tu correo *" required="required" data-validation-required-message="Por favor ingresa tu dirección de correo electrónico">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="Tu teléfono *" required="required" data-validation-required-message="Por favor ingreso tu número telefónico">
-                                    <p class="help-block text-danger"></p>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="500">
+                                        <div class="text-primary">
+                                            <i class="pb-3 fas fa-laptop fa-3x"></i>
+                                            <p class="font-weight-bold">Tecnología</p>
+                                        </div>
+                                        <p>Brindamos soporte a hogares y empresas en sistemas de cámaras y seguridad, alarmas, equipos de computo, mantenimiento de hardware y suministro de software.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Tu mensaje *" required="required" data-validation-required-message="El mensaje lo puedes escribir aquí"></textarea>
-                                    <p class="help-block text-danger"></p>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1000">
+                                        <div class="text-primary">
+                                            <i class="pb-3 far fa-lightbulb fa-3x"></i>
+                                            <p class="font-weight-bold">Eléctricidad</p>
+                                        </div>
+                                        <p>Redes, equipos y maquinaria, insumos, a nivel residencial y empresarial, desde la ingeniería hasta el montaje, aplicación de controles y planes de mantenimiento.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                {!! htmlFormSnippet() !!}
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="1500">
+                                        <div class="text-primary">
+                                            <i class="pb-3 fas fa-cogs fa-3x"></i>
+                                            <p class="font-weight-bold">Electromecánica</p>
+                                        </div>
+                                        <p>Soportamos las operaciones de producción de las empresas mediante la generación de energía, sistemas de bombeo, asesoría y suministro de repuestos.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar mensaje</button>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body py-5" data-aos="zoom-in" data-aos-duration="2000">
+                                        <div class="text-primary">
+                                            <i class="pb-3 fas fa-sun fa-3x"></i>
+                                            <p class="font-weight-bold">Energía solar</p>
+                                        </div>
+                                        <p>Impulsamos el desarrollo económico del país mediante el uso de recursos renovables, ejecutando proyectos de energía solar fotovoltaica para hogares, empresas y agroindustria.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="da-projects" id="projects">
+                <div class="row mx-0">
+                    <div class="col-md-6 px-0 da-project-1" style="background-image: url('theme/images/da-img-2a.jpg');" data-aos="zoom-in"></div>
+                    <div class="col-md-6 pl-5 pt-5 pb-3">
+                        <div class="row">
+                            <div class="col-1 da-project-icon"><i class="text-warning fas fa-video fa-2x fa-fw"></i></div>
+                            <div class="col-10">
+                                <div class="h4">Seguridad electrónica</div>
+                                <p>Diseño, instalación y mantenimiento de CCTV, sistemas de control de acceso y vídeo porteros, sistemas contra incendios, sistemas de alarmas antirrobo, domótica.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 da-project-icon"><i class="text-info fas fa-laptop fa-2x fa-fw"></i></div>
+                            <div class="col-10">
+                                <div class="h4">Servicios informáticos</div>
+                                <p>Servicios de software y hardware, redes informáticas y telecomunicaciones, soporte técnico remoto y en sitio, asesorías, mantenimientos de impresoras y suministro de equipos.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 da-project-icon"><i class="fas fa-plug fa-2x fa-fw"></i></div>
+                            <div class="col-10">
+                                <div class="h4">Soluciones eléctricas</div>
+                                <p>Diseño, montaje y mantenimiento de instalaciones eléctricas residenciales e industriales, tableros de distribución, sistemas puestas a tierra, transformadores eléctricos, variadores de velocidad, motores eléctricos y eficiencia energética.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0">
+                    <div class="col-md-6 pl-5 pt-5 pb-3">
+                        <div class="row mb-3">
+                            <div class="col-1 da-project-icon"><i class="text-warning fas fa-cogs fa-2x fa-fw"></i></div>
+                            <div class="col-10">
+                                <div class="h4">Soluciones electromecánicas</div>
+                                <p>Suministro de plantas eléctricas servicio Standby 7x24, sistemas de transferencias mecánicas y electrónicas, bombas de presión de agua, aires acondicionados, sistemas de ventilación, consultoría y asesorías técnicas.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-1 da-project-icon"><i class="text-info far fa-sun fa-2x fa-fw"></i></div>
+                            <div class="col-10">
+                                <div class="h4">Energía solar fotovoltaica</div>
+                                <p>Diseño, instalación y mantenimiento de sistemas de bajo consumo, sistemas autónomos que utilizan baterías, controladores e inversores, ideales para la agroindustria, especialmente en lugares de difícil acceso de la red eléctrica, sistemas interconectados a red, sistema de iluminación, sistemas de riego y de bombeo alimentados 100% con energía solar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-0 da-project-2" style="background-image: url('theme/images/da-img-5a.jpg');" data-aos="zoom-in"></div>
+                </div>
+            </div>
+            <div class="da-expertise">
+                <div class="row mx-0">
+                    <div class="col-md-6 px-0 da-exp-image" style="background-image: url('theme/images/da-img-6a.jpg');" data-aos="zoom-in"></div>
+                    <div class="col-md-6 da-exp-skills">
+                        <div class="container text-uppercase">
+                            <h3 class="h5 mb-5">Nuestra experticia</h3>
+                            <div class="col px-0 mb-4">
+                                <p>informática y redes 85%</p>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col px-0 mb-4">
+                                <p>Electricidad 90%</p>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col px-0 mb-4">
+                                <p>Electromecánica 90%</p>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col px-0 mb-4">
+                                <p>Energía solar 85%</p>
+                                <div class="progress" style="height: 5px;">
+                                    <div class="progress-bar" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="da-section bg-secondary text-white">
+                <div class="container">
+                    <div class="row px-4">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="media py-2" data-aos="flip-up">
+                                <i class="mr-3 fas fa-clipboard-check  fa-3x fa-fw"></i>
+                                <div class="media-body">
+                                    <div class="h5">45</div>
+                                    <div class="h6">Proyectos ejecutados</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="media py-2" data-aos="flip-up">
+                                <i class="mr-3 fas fa-smile  fa-3x fa-fw"></i>
+                                <div class="media-body">
+                                    <div class="h5">645</div>
+                                    <div class="h6">Clientes satisfechos</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="media py-2" data-aos="flip-up">
+                                <i class="mr-3 fas fa-file-alt fa-3x fa-fw"></i>
+                                <div class="media-body">
+                                    <div class="h5">433</div>
+                                    <div class="h6">Apreciaciones</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="media py-2" data-aos="flip-up">
+                                <i class="mr-3 fas fa-clock  fa-3x fa-fw"></i>
+                                <div class="media-body">
+                                    <div class="h5">6840</div>
+                                    <div class="h6">Horas laboradas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="da-section" id="team">
+                <div class="container">
+                    <div class="h3 text-center" data-aos="fade-up">Miembros del equipo</div>
+                </div>
+                <div class="da-team carousel slide py-5" id="da-carouselIndicator" data-ride="carousel" data-aos="zoom-in-up" data-aos-duration="1000">
+                    <div class="container">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#da-carouselIndicator" data-slide-to="0"></li>
+                            <li data-target="#da-carouselIndicator" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card d-block mb-3">
+                                            <img class="card-img-top" src="theme/images/da-emp-1.jpg" alt="image"/>
+                                            <div class="card-body text-center">
+                                                <div class="h5">Claudia Romero</div>
+                                                <p class="text-muted">Gerente</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card d-block mb-3">
+                                            <img class="card-img-top" src="theme/images/da-emp-2.jpg" alt="image"/>
+                                            <div class="card-body text-center">
+                                                <div class="h5">Jairo Camargo</div>
+                                                <p class="text-muted">Cofundador</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card d-block mb-3">
+                                            <img class="card-img-top" src="theme/images/da-emp-3.jpg" alt="image"/>
+                                            <div class="card-body text-center">
+                                                <div class="h5">Fredy Simanca</div>
+                                                <p class="text-muted">Ingeniero electromecánico</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card d-block mb-3">
+                                            <img class="card-img-top" src="theme/images/da-emp-4.jpg" alt="image"/>
+                                            <div class="card-body text-center">
+                                                <div class="h5">Melissa Díaz</div>
+                                                <p class="text-muted">Líder de operaciones</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card d-block mb-3">
+                                            <img class="card-img-top" src="theme/images/da-emp-5.jpg" alt="image"/>
+                                            <div class="card-body text-center">
+                                                <div class="h5">David López</div>
+                                                <p class="text-muted">Líder de mantenimiento</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card d-block mb-3">
+                                            <img class="card-img-top" src="theme/images/da-emp-6.jpg" alt="image"/>
+                                            <div class="card-body text-center">
+                                                <div class="h5">Carlos Quintero</div>
+                                                <p class="text-muted">Ingeniero eléctrico</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container da-gallery" id="gallery">
+                <div class="h3 pb-5 text-center" data-aos="fade-up">Proyectos</div>
+                <div class="card-columns">
+                    <div class="card"><a href="theme/images/gallery-img-3.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="theme/images/gallery-img-3.jpg" alt="Gallery Image 1"/></a></div>
+                    <div class="card"><a href="theme/images/gallery-img-5.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="theme/images/gallery-img-5.jpg" alt="Gallery Image 2"/></a></div>
+                    <div class="card"><a href="theme/images/gallery-img-4.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="theme/images/gallery-img-4.jpg" alt="Gallery Image 3"/></a></div>
+                    <div class="card"><a href="theme/images/gallery-img-1.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="theme/images/gallery-img-1.jpg" alt="Gallery Image 4"/></a></div>
+                    <div class="card"><a href="theme/images/gallery-img-2.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="theme/images/gallery-img-2.jpg" alt="Gallery Image 5"/></a></div>
+                </div>
+            </div>
+            <div class="da-section">
+                <div class="container da-company-brand py-5">
+                    <div class="h3 pb-3 text-uppercase text-center" data-aos="fade-up">Clientes</div>
+                    <p class="pb-3 text-center" data-aos="fade-up">Empresas que han puesto su confianza en nosotros</p>
+                    <div class="row">
+                        <div class="col-md-3 text-center mt-4"><img class="img-fluid" src="theme/images/company-1.png" alt="CDA Ciudad Bonita"/></div>
+                        <div class="col-md-3 text-center mt-4"><img class="img-fluid" src="theme/images/company-2.png" alt="Espumas Santander"/></div>
+                        <div class="col-md-3 text-center mt-4"><img class="img-fluid" src="theme/images/company-3.png" alt="Estatal de Seguridad"/></div>
+                        <div class="col-md-3 text-center mt-4"><img class="img-fluid" src="theme/images/company-4.png" alt="West Army Security"/></div>
+                    </div>
+                </div>
+            </div>
+            <div class="da-section da-brand bg-secondary">
+                <div class="container text-center text-white">
+                    <div class="carousel slide pb-5" id="da-brand-carouselIndicator" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#da-brand-carouselIndicator" data-slide-to="0"></li>
+                            <li data-target="#da-brand-carouselIndicator" data-slide-to="1"></li>
+                            <li data-target="#da-brand-carouselIndicator" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <p>"Seted.co ha sido nuestro aliado en la seguridad de las instalaciones de nuestra empresa, nos brinda un servicio de mucha calidad."</p>
+                                        <div class="h6 text-uppercase">Espumas Santander</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <p>"Tenemos la responsabilidad de garantizar la integridad de las instalaciones y equipos, y Seted.co ha sido el proveedor de la mejor tecnología para el desarrollo de nuestra labor."</p>
+                                        <div class="h6 text-uppercase">Estatal de Seguridad</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <p>"Seted.co nos ha provisto de lo mejor en CCTV, estamos muy agradecidos por su valioso trabajo, continuaremos fortaleciendo esta gran alianza para alcanzar el crecimiento mutuo"</p>
+                                        <div class="h6 text-uppercase">CDA Ciudad Bonita</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="da-contact" id="contact">
+                <div class="da-contact-detail" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="container">
+                        <div class="card py-4 px-4">
+                            <div class="h4 pb-4">Escríbenos</div>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-12 mb-3">
+                                    <div class="da-contact-message">
+                                        <form action="{{ route('contact') }}" method="POST">
+                                            @csrf
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12 mb-3">
+                                                    <input class="mr-3 form-control" type="text" name="name" value="{{ old('name') }}" placeholder="*Nombre" required="required"/>
+
+                                                    @error('name')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 mb-3">
+                                                    <input class="form-control" type="tel" name="phone" value="{{ old('phone') }}" placeholder="*Teléfono"/>
+
+                                                    @error('phone')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <input class="form-control" type="email" name="email" value="{{ old('email') }}" placeholder="*Correo" required="required"/>
+
+                                                    @error('email')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <textarea class="form-control" name="message" value="{{ old('message') }}" placeholder="*Tu mensaje" rows="4" required="required"></textarea>
+
+                                                    @error('message')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    {!! htmlFormSnippet() !!}
+
+                                                    @error('recaptcha')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <address>
+                                        <p>Estamos comprometidos en mantener contacto permanente con clientes, aliados y comunidad, nuestro equipo estará presto a atender cualquier solicitud.</p>
+                                        <p><b>Dirección:</b> Bucaramanga</p>
+                                        <p><b>Teléfono:</b> (057) 316 123 4455</p>
+                                        <p><b>Correo:</b> <a href="mailto:contacto@seted.co">contacto@seted.co</a></p>
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+    </div>
+    <footer class="bg-secondary da-section">
+        <div class="container text-white">
             <div class="row">
-                <div class="col-md-3 mb-4">
-                    <h4>Dirección</h4>
-                    <ul class="list-group list-group-flush text-left">
-                        <li class="list-group-item"><i class="fas fa-map-marker"></i> Calle 12 No. 6A-15</li>
-                        <li class="list-group-item"><i class="fas fa-map-marked"></i> Barrio Villa Nueva</li>
-                        <li class="list-group-item"><i class="fas fa-map"></i> San Martín, Cesar, Colombia</li>
+                <div class="col-md-4">
+                    <div class="h2">{{ config('app.name') }}</div>
+                    <p class="mb-0">contacto@seted.co</p>
+                    <p>(057) 316 123 4455</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="h6 pb-2">Síguenos</div>
+                    <ul>
+                        <li><a class="da-social-link" href="https://www.facebook.com/SETEDCO-INGENIERIA-557599321285008/" target="_blank">Facebook</a></li>
+                        <li><a class="da-social-link" href="https://www.instagram.com/setedco_ingenieria/" target="_blank">Instagram</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h4>Teléfonos</h4>
-                    <ul class="list-group list-group-flush text-left">
-                        <li class="list-group-item"><i class="fas fa-mobile-alt"></i> 317 642 4421</li>
-                        <li class="list-group-item"><i class="fas fa-mobile-alt"></i> 314 248 9988</li>
-                        <li class="list-group-item">Líneas servicio 24 horas <i class="fas fa-hand-point-down"></i></li>
-                        <li class="list-group-item"><i class="fas fa-mobile"></i> 315 506 2562</li>
-                        <li class="list-group-item"><i class="fas fa-mobile"></i> 314 2476069</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h4>Horario</h4>
-                    <ul class="list-group list-group-flush text-left">
-                        <li class="list-group-item"><b>Lunes-Viernes</b>: 8:00 AM-12:00, 2:00 PM-6:00 PM</li>
-                        <li class="list-group-item"><b>Sábados</b>: 8:00 AM-12:00</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h4>Redes sociales</h4>
-                    <img class="img-fluid m-3" style="max-width: 70%; margin: 0 auto;" src="{{ asset('theme/images/logo.png') }}"></img>
-                    <ul class="list-inline social-buttons">
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/TLSI-100639641433481/?modal=admin_todo_tour" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com/servicioespecialtlsi/?hl=es-la" target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-12">
-                    <span class="copyright">Derechos de autor &copy; {{ config('app.name') }} {{ date('Y') }} - Powered by <a class="text-green" href="https://omarbarbosa.com">Omar Barbosa</a></span>
+                <div class="col-md-4">
+                    <div class="h6 pb-2">Derechos de autor</div>
+                    <p>&copy; {{ date('Y') }} {{ config('app.name') }}. Todos los derechos reservados</p>
+                    <p>Diseño - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- Portfolio Modals -->
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Tractocamión</h2>
-                                <p class="item-intro text-muted">Cama bajas y tanques.</p>
-                                <img class="img-fluid d-block mx-auto" src="theme/images/portfolio/truck.jpg" alt="">
-                                <p>Nos especializamos en transporte de carga seca utilizando tractocamiones con cama baja, contamos con personal altamente entrenado y experimentado en izaje de cargas. Apoyamos el desarrollo de la industria petrolera de la región, para lo cual contamos con tractocamiones con tanque para el transporte de hidrocarburos, lámina de acero al carbon y acero inoxidable, los cuales están equipados con elementos contra incendio y anti derrame, operamos bajo protocolos y estándares de seguridad.!</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Busetas</h2>
-                                <p class="item-intro text-muted">Vans - Micro.</p>
-                                <img class="img-fluid d-block mx-auto" src="theme/images/portfolio/bus.jpg" alt="">
-                                <p>El transporte del personal es un aspecto fundamental, garantizamos los desplazamientos con busetas dotadas de todos los elementos de seguridad, y personal idóneo al volante, entendemos la alta responsabilidad de este ejercicio.!</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Camionetas</h2>
-                                <p class="item-intro text-muted">Pickups.</p>
-                                <img class="img-fluid d-block mx-auto" src="theme/images/portfolio/pickup.jpg" alt="">
-                                <p>Somos aliados en el desarrollo de las operaciones de las empresas del sector, para ello contamos con camionetas pickup, dotadas con los elementos necesarios en la seguridad vial, nuestros conductores están capacitados en manejo defensivo y buenas practicas.!</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Maquinaria</h2>
-                                <p class="item-intro text-muted">Línea amarilla.</p>
-                                <img class="img-fluid d-block mx-auto" src="theme/images/portfolio/machinery.jpg" alt="">
-                                <p>Suministro de toda la maquinaria necesaria para llevar a cabo construcciones y mantenimientos de infraestructuras: Bulldozer, retroexcavadora y retrocargador, motoniveladora, vibrocompactadores, cargadores, montacargas, minicargador, telehandler, y demás.!</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Ingeniería</h2>
-                                <p class="item-intro text-muted">Asesorías, formulación y evaluación.</p>
-                                <img class="img-fluid d-block mx-auto" src="theme/images/portfolio/engineer.jpg" alt="">
-                                <p>Servicios en el área de ingeniería civil y ambiental, brindando asesorías en la elaboración de PMA, MMA y EIA , formulación y evaluación de proyectos viales, diseños de pavimentos flexibles y rígidos, asesorías en ensayos de laboratorio de pavimentos, suelos y geotecnia. También apoya la logística en la operación y mantenimiento de vías, implementación de medición de indicadores, mantenimiento de infraestructuras como vías, obras de arte y de estructuras de contención.!</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Auxiliares viales</h2>
-                                <p class="item-intro text-muted">Logística en carreteras.</p>
-                                <img class="img-fluid d-block mx-auto" src="theme/images/portfolio/aux.jpg" alt="">
-                                <p>Apoyamos las operaciones en las vías de la región, suministrando personal para el control del tráfico en construcciones y mantenimientos, movilizaciones, y demás.!</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="scrolltop">
+        <button class="btn btn-primary"><span class="icon"><i class="fas fa-angle-up fa-2x"></i></span></button>
     </div>
 
-    <!-- Policy Modals -->
-    <!-- Policy 1 -->
-    <div class="portfolio-modal modal fade" id="policy1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Política del sistema integrado de gestión</h2>
-                                <p class="text-justify">TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”, es una empresa dedicada al transporte especial de pasajeros, transporte de carga seca y liquida por carretera, suministro y alquiler de maquinaria y equipos para izaje, siendo sostenible y responsable que se encuentra plenamente comprometida en la satisfacción de las necesidades de sus clientes, la salud y seguridad de sus trabajos, de su personal y el cuidado del medio ambiente; identificando, valorando y controlando peligros y riesgos; bajo estricto cumplimiento de los requisitos legales, las normas ambientales y de seguridad, promoviendo la calidad de vida laboral, evitando la enfermedad laboral, los accidentes de trabajo, el daño a la propiedad, los impactos y daños socio ambientales, incrementando la competencia del talento humano, manteniendo comunicación abierta y efectiva con sus grupos de apoyo y partes interesadas, mejorando continuamente sus procesos y servicios.</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Policy 2 -->
-    <div class="portfolio-modal modal fade" id="policy2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Política de no alcohol, no drogas y no armas</h2>
-                                <p class="text-justify">En TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”, se reconoce que tanto el alcoholismo, como la drogadicción son problemas de salud pública, por lo cual son susceptibles a tratamiento y prevención. En consecuencia: Se prohíbe el ingreso, comercialización, y consumo de alcohol, drogas y tabaco dentro de la empresa o al interior de vehículos, parqueaderos o locaciones de trabajo del cliente, se prohíbe ingresar a laborar bajo efectos de alcohol, drogas alucinógenas o tabaco y el ingreso de todo tipo de armas convencionales, no convencionales o artesanales a la empresa o al interior de vehículos, parqueaderos o locaciones de trabajo del cliente. La empresa se reserva el derecho de la realización de pruebas de alcohol, requisas, inspecciones a los trabajadores, sin previo aviso, con el fin del cumplimiento de esta política, así las personas que se nieguen a realizarlas se tomaran como incumplimiento a la política y representa un acto causal de terminación del contrato de trabajo, sin previo aviso o reposición.</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Policy 3 -->
-    <div class="portfolio-modal modal fade" id="policy3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Política seguridad vial</h2>
-                                <p class="text-justify">TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”, es una empresa dedicada al transporte especial de pasajeros, transporte de carga seca y liquida por carretera, suministro y alquiler de maquinaria y equipos para izaje, por lo cual reconoce que el riesgo vial es nuestra mayor preocupación, por lo cual: se garantizan las acciones para la selección y evaluación de conductores, se desarrollan programas de capacitación y entrenamiento para prevenir siniestros viales, se incentiva el respeto por las normas de tránsito, los límites de velocidad y la adopción de hábitos seguros en las vías, se garantizan las condiciones técnico mecánicas y de seguridad de los vehículos para la prestación del servicio, se analizan e identifican los riesgos viales asociados a las operaciones, se promueve la prevención de la fatiga en la conducción y otras situaciones que aumenten la materialización de riesgo. A su vez: se prohíbe el uso de equipos de comunicación bidireccionales, el consumo de comidas, bebidas mientras se efectúen labores de conducción; los vehículos no tendrán en el vidrio panorámico ningún tipo de sticker, afiche, calcomanía u cualquier otro distractor; y se prohíben las bromas o actos de riesgo mientras se conduce. Esta Política ofrece un marco de referencia para lograr el objetivo del Plan Estratégico de Seguridad Vial y es de obligatorio cumplimiento para conductores propios y terceros, quienes deben seguir los lineamientos establecidos. La Gerencia destinará los recursos financieros, tecnológicos y talento humano necesario para garantizar la mejora continua de la Seguridad Vial en las operaciones de transporte terrestre. Por lo anterior cuando el conductor, el vehículo o las condiciones de trabajo, incumplan estándares de seguridad se suspenderá la operación hasta tanto no se implementen los correctivos, y se mantendrán los registros necesarios que permitan su trazabilidad.</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Policy 4 -->
-    <div class="portfolio-modal modal fade" id="policy4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Política uso del cinturón de seguridad</h2>
-                                <p class="text-justify">TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”, está comprometida con la promoción y prevención de siniestros viales por lo que es obligatorio el uso del cinturón de seguridad por parte del conductor y por los pasajeros ubicados en los asientos delanteros o traseros del vehículo, en todas las vías del territorio nacional incluyendo las urbanas, de acuerdo a la normatividad vigente Código Nacional de Tránsito. TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”, promoverá el uso de cinturón de seguridad a todo el personal tanto administrativo como operativo. Teniendo en cuenta que este reduce en gran manera el riesgo de lesiones al momento de un accidente vial. El conductor debe utilizar el cinturón de seguridad siempre que conduzca un vehículo por corto que sea el trayecto y es responsable por cada uno de los ocupantes del vehículo para que lo usen de manera apropiada, segura y en todo momento. Para asegurar el cumplimiento del mencionado se realizara acciones permanentes vinculadas con la capacitación y el entrenamiento en sus trabajadores, las que se materializarán a través de: Charlas, Cursos, Instrucciones en el buen uso de este elementos y Evaluaciones, entre otras actividades, con personal idóneo y calificado, los que formarán parte del que hacer normal de la empresa y de su personal durante la jornada de conducción, de igual en acompañamiento con las inspecciones de nuestros coordinadores de operaciones y de nuestras empresas clientes.</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Policy 5 -->
-    <div class="portfolio-modal modal fade" id="policy5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Política de regulación de horas de conducción y descanso</h2>
-                                <p class="text-justify">TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”, mediante la adopción de esta política, la organización busca garantizar un óptimo desempeño de sus operaciones dentro del marco de la seguridad vial e industrial. Igualmente, dentro de esta política se implementará la práctica de pausas activas como una medida obligatoria para promover y regular el adecuado descanso de los conductores. En consecuencia, los programas que se implementen bajo esta política deberán:</p>
-                                <ol class="text-justify">
-                                    <li>Establecer tiempos de reposo y descanso para prevenir la fatiga.</li>
-                                    <li>Establecer pausas activas cada 2 horas. (Ejercicios de estiramiento).</li>
-                                    <li>Establecer esquemas de seguimiento sobre el cumplimiento de los tiempos de reposo y pausas a los conductores que realicen actividad en recorridos largos.</li>
-                                    <li>Incluir temas de capacitación sobre hábitos de sueño y descanso, nutrición y ejercicio los cuales pueden prevenir la fatiga en los trabajadores.</li>
-                                    <li>Evaluar en caso de accidente o incidente de trabajo la probabilidad de causalidad por la fatiga.</li>
-                                </ol>
-                                <p class="text-justify">Para el cumplimiento de la política, la Gerencia General asigna los recursos financieros, humanos y técnicos necesarios, será un compromiso de los trabajadores.</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Policy 6 -->
-    <div class="portfolio-modal modal fade" id="policy6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2 class="text-uppercase">Política de no uso de equipos de comunicaciones móviles mientras se labora</h2>
-                                <p class="text-justify">El uso de equipos de comunicación está prohibido mientras se conduce un vehículo ya sea de la empresa y/o propio, operado por los trabajadores suministrados por TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”. o cuando se realizan labores de controlador vial. Los siguientes son los requisitos mínimos de operación:</p>
-                                <ul class="text-justify">
-                                    <li>El uso de teléfonos móviles, dispositivos de manos libres, asistentes digitales personales, dispositivos de mano, tabletas, dispositivos convergentes, dispositivos de mensajes de texto, audífonos, computadoras y otros dispositivos electrónicos móviles, (ya sea de otra persona o de propiedad de la empresa (TRANSPORTES LOGISTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”), está prohibido su uso cuando el vehículo está en movimiento.</li>
-                                    <li>El uso de teléfonos móviles, dispositivos de manos libres, asistentes digitales personales, dispositivos de mano, tabletas, dispositivos convergentes, dispositivos de mensajes de texto, audífonos, computadoras y otros dispositivos electrónicos móviles, (ya sea de otra persona o de propiedad de la empresa (TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”), está prohibido su uso cuando se ejercen labores de control vial.</li>
-                                    <li>Si es necesario realizar una llamada del teléfono móvil en cualquier momento mientras se está en el lugar de control vial deberá realizarlo en los momentos de menor flujo vehicular, ya que estos dispositivos son grandes distractores y ocasionan gran cantidad de accidentes laborales a nivel mundial.</li>
-                                    <li>Si es necesario realizar una llamada del teléfono móvil en cualquier momento mientras se está conduciendo, el conductor deberá entregar el móvil o aparato a su compañera/o. </li>
-                                    <li>Los conductores no llevaran auriculares u otros dispositivos mientras se conduce un vehículo.</li>
-                                </ul>
-                                <p class="text-justify">TRANSPORTES LOGÍSTICOS Y SERVICIOS DE INGENIERÍA SAS “TLSI SAS”. Promoverá el no uso de equipos de comunicación mientras se esté conduciendo un vehículo o cuando se realizan labores de controlador vial, concientizando a los trabajadores en que este tipo de acciones podrían dar lugar a posibles incidentes y accidentes de trabajo. Cumpliendo así con la política establecida por la empresa y el código nacional de tránsito.</p>
-                                <button class="btn btn-primary btn-green" data-dismiss="modal" type="button">
-                                <i class="fas fa-times"></i>
-                                Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
-    <script type="text/javascript" src="{{ mix('js/tlsi.js') }}"></script>
-    <script>
-        $('#flash-overlay-modal').modal();
-    </script>
-    <script type="application/ld+json" async>
-        {
-            "@context": "http://schema.org/",
-            "@type": "WebSite",
-            "name": "TLSI S.A.S.",
-            "alternateName": "Transportes logísticos y servicios de ingeniería S.A.S.",
-            "url": "https://tlsi.com.co",
-            "image": "{{ asset('theme/images/logo.png') }}",
-            "description": "Empresa de transporte, carga líquida y seca, suministro de busetas, camionetas, maquinaria, auxiliares viales, y servicios de ingeniería en asesoría, formulación y evaluación de proyectos."
-        }
-    </script>
-</body>
-</html>
+@endsection

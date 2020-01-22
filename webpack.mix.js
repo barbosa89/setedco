@@ -14,12 +14,13 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .styles([
-    	'public/theme/css/agency.css'
-    ], 'public/css/tlsi.css')
+        'public/theme/css/aos.css',
+        'public/theme/css/ekko-lightbox.css',
+        'public/theme/css/main.css'
+    ], 'public/css/setedco.css')
     .scripts([
-    	'node_modules/jquery.easing/jquery.easing.js',
-    	'public/theme/js/jqBootstrapValidation.js',
-    	'public/theme/js/contact_me.js',
-    	'public/theme/js/agency.js'
-    ], 'public/js/tlsi.js')
+        'public/theme/js/aos.js',
+        'public/theme/js/ekko-lightbox.min.js',
+        'public/theme/js/main.js'
+    ], 'public/js/setedco.js')
     .sourceMaps();

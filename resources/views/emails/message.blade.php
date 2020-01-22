@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="x-apple-disable-message-reformatting">
-    <title>New message | {{ config('app.name') }}</title>
+    <title>Nuevo mensaje | {{ config('app.name') }}</title>
     <style>
         body {
             margin: 0 auto !important;
@@ -182,7 +182,7 @@
             <tr>
                 <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
                     <br>
-                    {{ config('app.name') }}<br><a style="color:#888888" href="https://www.tlsi.com.co">www.tlsi.com.co</a>
+                    {{ config('app.name') }}<br><a style="color:#888888" href="{{ config('app.url') }}">{{ config('app.url') }}</a>
                     <br><br>
                 {{-- <unsubscribe><a style="color:#888888; text-decoration:underline;" href="{{ url('account/delete') }}" title="{{ trans('common.deleteAccount') }}">@lang('common.deleteAccount')</a></unsubscribe> --}}
                 </td>
