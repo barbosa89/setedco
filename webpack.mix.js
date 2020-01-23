@@ -23,4 +23,5 @@ mix.js('resources/js/app.js', 'public/js')
         'public/theme/js/ekko-lightbox.min.js',
         'public/theme/js/main.js'
     ], 'public/js/setedco.js')
-    .sourceMaps();
+    .sourceMaps()
+    .browserSync("landing.test");

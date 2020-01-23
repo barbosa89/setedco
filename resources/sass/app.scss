@@ -15,3 +15,24 @@
 .bg-secondary {
     background-color: #487aa9 !important;
 }
+
+.titles {
+    text-shadow: 1px 1px 0px #f8f9fa;
+    color: rgba(63, 63, 63, 1) !important;
+}
+
+.first-title {
+    margin-left: -6px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #487aa9;
+    border-color: #487aa9;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #5593ce;
+    border-color: #4e91d0;
+}

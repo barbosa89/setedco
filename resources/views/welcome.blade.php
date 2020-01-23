@@ -23,8 +23,8 @@
         <div class="da-home-page-text" data-aos="fade-right" data-aos-duration="1000">
             <div class="container">
                 <div class="col-md-10 col-sm-12 px-0 mx-0">
-                    <h2 class="display-3" style="margin-left:-6px; color: rgba(63, 63, 63, 1);">Ingeniería integral</h2>
-                    <h3 class="h5 mt-3" style="color: rgba(63, 63, 63, 1);">Soluciones eléctricas y tecnológicas para la empresa y el hogar</h3>
+                    <h2 class="display-3 titles first-title">Ingeniería integral</h2>
+                    <h3 class="h5 mt-3 titles">Soluciones eléctricas y tecnológicas para la empresa y el hogar</h3>
                     <a class="smooth-scroll btn btn-primary mt-4" href="#learn">Ver más</a>
                 </div>
             </div>
