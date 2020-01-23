@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'LaravelPWA',
+    'name' => env('APP_NAME', 'My PWA App'),
     'manifest' => [
         'name' => env('APP_NAME', 'My PWA App'),
-        'short_name' => 'PWA',
+        'short_name' => env('APP_NAME', 'My PWA App'),
         'start_url' => '/',
         'background_color' => '#c5d8e9',
         'theme_color' => '#487aa9',
