@@ -491,7 +491,7 @@
                         Imágenes de <a class="credit" href="https://www.freepik.com/" target="_blank">Freepik</a> y <a class="credit" href="https://www.unsplash.com/" target="_blank">Unsplash</a>
                     </p>
                     <p>
-                        Powered by <a href="https://omarbarbosa.com/" class="credit text-light">Omar Barbosa</a>
+                        Powered by <a href="https://omarbarbosa.com/" class="credit text-light" target="_blank">Omar Barbosa</a>
                     </p>
                 </div>
             </div>
