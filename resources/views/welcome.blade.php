@@ -483,8 +483,16 @@
                 </div>
                 <div class="col-md-4">
                     <div class="h6 pb-2">Derechos de autor</div>
-                    <p>&copy; {{ date('Y') }} {{ config('app.name') }}. Todos los derechos reservados</p>
-                    <p>Diseño - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
+                    <p>&copy; {{ date('Y') }} <a class="text-light" href="{{ url('/') }}">{{ config('app.name') }}</a>. Todos los derechos reservados</p>
+                    <p>
+                        Diseño de <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a>
+                    </p>
+                    <p>
+                        Imágenes de <a class="credit" href="https://www.freepik.com/" target="_blank">Freepik</a> y <a class="credit" href="https://www.unsplash.com/" target="_blank">Unsplash</a>
+                    </p>
+                    <p>
+                        Powered by <a href="https://omarbarbosa.com/" class="credit text-light">Omar Barbosa</a>
+                    </p>
                 </div>
             </div>
         </div>
