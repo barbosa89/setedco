@@ -147,7 +147,8 @@ header {
 /*Contact Style*/
 
 .da-contact {
-    background: url("../theme/images/staticmap.png") no-repeat center center;
+    background: #c5d8e9;
+    /*background: url("../theme/images/staticmap.png") no-repeat center center;*/
     position: relative;
     min-height: 700px;
     background-size: cover;
