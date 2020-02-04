@@ -36,7 +36,6 @@
     </script>
 
     <!-- Smartsupp Live Chat script -->
-    <!-- Smartsupp Live Chat script -->
     <script type="text/javascript">
         var _smartsupp = _smartsupp || {};
         _smartsupp.key = '61777d13efe36fa9151368e98452223bff944dbc';
