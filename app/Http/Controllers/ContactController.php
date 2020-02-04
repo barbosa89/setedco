@@ -39,8 +39,7 @@ class ContactController extends Controller
 
             return redirect('/#contact');
         } else {
-            Mail::to('asimanca@seted.co')
-                ->cc('jcamargo@seted.co')
+            Mail::to('contacto@seted.co')
                 ->send(new ContactMessage($request));
 
             if (count(Mail::failures()) > 0) {

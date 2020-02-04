@@ -34,6 +34,18 @@
 
         gtag('config', 'UA-156748060-1');
     </script>
+
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript" async>
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = 'b6c8cbd0463a1ce3dd8eb090848092ffc042f103';
+        window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+    </script>
 </head>
 <body id="top">
     @include('flash::message')
@@ -79,7 +91,7 @@
 
                 function update() {
                     var counter = 0;
-              
+
                     elements.each(function() {
                         var $this = $(this);
                         if (settings.skip_invisible && !$this.is(":visible")) {
@@ -103,11 +115,11 @@
                 if(options) {
                     /* Maintain BC for a couple of versions. */
                     if (undefined !== options.failurelimit) {
-                        options.failure_limit = options.failurelimit; 
+                        options.failure_limit = options.failurelimit;
                         delete options.failurelimit;
                     }
                     if (undefined !== options.effectspeed) {
-                        options.effect_speed = options.effectspeed; 
+                        options.effect_speed = options.effectspeed;
                         delete options.effectspeed;
                     }
 
@@ -143,7 +155,7 @@
                                 loadImgUri = $self.data("background");
                             else
                                 loadImgUri  = $self.data(settings.data_attribute);
-                            
+
                             $("<img />")
                                 .bind("load", function() {
                                     $self
@@ -152,17 +164,17 @@
                                         $self.css('backgroundImage', 'url('+$self.data("background")+')');
                                     }else
                                         $self.attr("src", $self.data(settings.data_attribute))
-                                        
+
                                     $self[settings.effect](settings.effect_speed);
-                                    
+
                                     self.loaded = true;
-            
+
                                     /* Remove image from array so it is not looped next time. */
                                     var temp = $.grep(elements, function(element) {
                                         return !element.loaded;
                                     });
                                     elements = $(temp);
-            
+
                                     if (settings.load) {
                                         var elements_left = elements.length;
                                         settings.load.call(self, elements_left, settings);
@@ -170,7 +182,7 @@
                                 })
                                 .attr("src", loadImgUri );
                         }
-                        
+
                     });
 
                     /* When wanted event is triggered load original image */
@@ -191,7 +203,7 @@
 
                 /* Force initial check if images should appear. */
                 update();
-                
+
                 return this;
             };
 
@@ -200,7 +212,7 @@
 
             $.belowthefold = function(element, settings) {
                 var fold;
-                
+
                 if (settings.container === undefined || settings.container === window) {
                     fold = $window.height() + $window.scrollTop();
                 } else {
@@ -209,7 +221,7 @@
 
                 return fold <= $(element).offset().top - settings.threshold;
             };
-            
+
             $.rightoffold = function(element, settings) {
                 var fold;
 
@@ -221,10 +233,10 @@
 
                 return fold <= $(element).offset().left - settings.threshold;
             };
-                
+
             $.abovethetop = function(element, settings) {
                 var fold;
-                
+
                 if (settings.container === undefined || settings.container === window) {
                     fold = $window.scrollTop();
                 } else {
@@ -233,10 +245,10 @@
 
                 return fold >= $(element).offset().top + settings.threshold  + $(element).height();
             };
-            
+
             $.leftofbegin = function(element, settings) {
                 var fold;
-                
+
                 if (settings.container === undefined || settings.container === window) {
                     fold = $window.scrollLeft();
                 } else {
@@ -247,7 +259,7 @@
             };
 
             $.inviewport = function(element, settings) {
-                 return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && 
+                 return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) &&
                         !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
              };
 
@@ -283,33 +295,22 @@
     </script>
     <script type="application/ld+json">
         {
-          "@context" : "http://schema.org",
-          "@type" : "Organization",
-          "name" : "{{ config('app.name') }}",
-         "url" : "{{ config('app.url') }}",
-         "sameAs" : [
-           "https://www.facebook.com/SETEDCO-INGENIERIA-557599321285008/",
-           "https://www.instagram.com/setedco_ingenieria/"
-           ],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Bucaramanga",
-            "addressRegion": "BGA",
-            "postalCode": "680001",
-            "addressCountry": "CO"
-          }
+            "@context" : "http://schema.org",
+            "@type" : "Organization",
+            "name" : "{{ config('app.name') }}",
+            "url" : "{{ config('app.url') }}",
+            "sameAs" : [
+                "https://www.facebook.com/SETEDCO-INGENIERIA-557599321285008/",
+                "https://www.instagram.com/setedco_ingenieria/"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Bucaramanga",
+                "addressRegion": "BGA",
+                "postalCode": "680001",
+                "addressCountry": "CO"
+            }
         }
-        </script>
-    <!-- Smartsupp Live Chat script -->
-    <script type="text/javascript" async>
-        var _smartsupp = _smartsupp || {};
-        _smartsupp.key = 'b6c8cbd0463a1ce3dd8eb090848092ffc042f103';
-        window.smartsupp||(function(d) {
-        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-        c.type='text/javascript';c.charset='utf-8';c.async=true;
-        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-        })(document);
     </script>
 </body>
 </html>
