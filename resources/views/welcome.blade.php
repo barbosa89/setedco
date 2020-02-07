@@ -32,41 +32,6 @@
     </header>
     <div class="page-content">
         <div>
-            <div class="da-section da-work bg-secondary" id="learn">
-                <div class="container">
-                    <div class="h3 pb-3 text-center text-white" data-aos="fade-up">¿Por qué trabajar con nosotros?</div>
-                    <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">La calidad es nuestra identidad, por lo cual enfocamos el desarrollo de la operación en tres pilares fundamentales para alcanzar el más alto grado de confiabilidad.</p>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-3" data-aos="flip-left">
-                                <div class="card-body mt-4 mb-1 text-center">
-                                    <i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
-                                    <div class="h4 pb-3">Experiencia</div>
-                                    <p>El equipo posee amplia experiencia y conocimientos en las áreas de nuestra operación, somos una empresa de alta fiabilidad.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mb-3" data-aos="zoom-in-up">
-                                <div class="card-body mt-4 mb-1 text-center">
-                                    <i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
-                                    <div class="h4 pb-3">Flexibilidad</div>
-                                    <p>Nos adaptamos a la operación de los clientes para facilitar la ejecución de las actividades y garantizar la continuidad de los procesos.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mb-3" data-aos="flip-right">
-                                <div class="card-body mt-4 mb-1 text-center">
-                                    <i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
-                                    <div class="h4 pb-3">Resultados</div>
-                                    <p>Nuestro trabajo es efectivo, sin interrumpir el normal transcurrir del día a día, entregando el mejor resultado en el menor tiempo posible.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="da-section bg-light" id="services">
                 <div class="da-services">
                     <div class="container text-center">
@@ -168,6 +133,41 @@
                     <div class="col-md-6 px-0 da-project-2" style="background-image: url('theme/images/da-img-5a.jpg');" data-aos="zoom-in"></div>
                 </div>
             </div>
+            <div class="da-section da-work bg-secondary" id="learn">
+                <div class="container">
+                    <div class="h3 pb-3 text-center text-white" data-aos="fade-up">¿Por qué trabajar con nosotros?</div>
+                    <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">La calidad es nuestra identidad, por lo cual enfocamos el desarrollo de la operación en tres pilares fundamentales para alcanzar el más alto grado de confiabilidad.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-3" data-aos="flip-left">
+                                <div class="card-body mt-4 mb-1 text-center">
+                                    <i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
+                                    <div class="h4 pb-3">Experiencia</div>
+                                    <p>El equipo posee amplia experiencia y conocimientos en las áreas de nuestra operación, somos una empresa de alta fiabilidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3" data-aos="zoom-in-up">
+                                <div class="card-body mt-4 mb-1 text-center">
+                                    <i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
+                                    <div class="h4 pb-3">Flexibilidad</div>
+                                    <p>Nos adaptamos a la operación de los clientes para facilitar la ejecución de las actividades y garantizar la continuidad de los procesos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3" data-aos="flip-right">
+                                <div class="card-body mt-4 mb-1 text-center">
+                                    <i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
+                                    <div class="h4 pb-3">Resultados</div>
+                                    <p>Nuestro trabajo es efectivo, sin interrumpir el normal transcurrir del día a día, entregando el mejor resultado en el menor tiempo posible.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="da-expertise">
                 <div class="row mx-0">
                     <div class="col-md-6 px-0 da-exp-image" style="background-image: url('theme/images/da-img-6a.jpg');" data-aos="zoom-in"></div>
@@ -261,8 +261,8 @@
                                         <div class="card d-block mb-3">
                                             <img class="card-img-top" src="theme/images/da-emp-1.jpg" alt="image"/>
                                             <div class="card-body text-center">
-                                                <div class="h5">Claudia Romero</div>
-                                                <p class="text-muted">Gerente</p>
+                                                <div class="h5">Jairo Camargo</div>
+                                                <p class="text-muted">CEO</p>
                                             </div>
                                         </div>
                                     </div>
@@ -270,8 +270,8 @@
                                         <div class="card d-block mb-3">
                                             <img class="card-img-top" src="theme/images/da-emp-2.jpg" alt="image"/>
                                             <div class="card-body text-center">
-                                                <div class="h5">Jairo Camargo</div>
-                                                <p class="text-muted">Cofundador</p>
+                                                <div class="h5">Andrés Simanca</div>
+                                                <p class="text-muted">Director de ingeniería</p>
                                             </div>
                                         </div>
                                     </div>
@@ -279,8 +279,8 @@
                                         <div class="card d-block mb-3">
                                             <img class="card-img-top" src="theme/images/da-emp-3.jpg" alt="image"/>
                                             <div class="card-body text-center">
-                                                <div class="h5">Fredy Simanca</div>
-                                                <p class="text-muted">Ingeniero electromecánico</p>
+                                                <div class="h5">Marcela Jaimes</div>
+                                                <p class="text-muted">Líder comercial</p>
                                             </div>
                                         </div>
                                     </div>
@@ -292,8 +292,8 @@
                                         <div class="card d-block mb-3">
                                             <img class="card-img-top" src="theme/images/da-emp-4.jpg" alt="image"/>
                                             <div class="card-body text-center">
-                                                <div class="h5">Melissa Díaz</div>
-                                                <p class="text-muted">Líder de operaciones</p>
+                                                <div class="h5">Jonatan Gómez</div>
+                                                <p class="text-muted">Técnico</p>
                                             </div>
                                         </div>
                                     </div>
@@ -301,8 +301,8 @@
                                         <div class="card d-block mb-3">
                                             <img class="card-img-top" src="theme/images/da-emp-5.jpg" alt="image"/>
                                             <div class="card-body text-center">
-                                                <div class="h5">David López</div>
-                                                <p class="text-muted">Líder de mantenimiento</p>
+                                                <div class="h5">Edward Díaz</div>
+                                                <p class="text-muted">Técnico</p>
                                             </div>
                                         </div>
                                     </div>
@@ -310,8 +310,8 @@
                                         <div class="card d-block mb-3">
                                             <img class="card-img-top" src="theme/images/da-emp-6.jpg" alt="image"/>
                                             <div class="card-body text-center">
-                                                <div class="h5">Carlos Quintero</div>
-                                                <p class="text-muted">Ingeniero eléctrico</p>
+                                                <div class="h5">Jerson García</div>
+                                                <p class="text-muted">Técnico</p>
                                             </div>
                                         </div>
                                     </div>
@@ -371,7 +371,7 @@
                             <div class="carousel-item">
                                 <div class="row justify-content-center">
                                     <div class="col-md-8">
-                                        <p>"Seted.co nos ha provisto de lo mejor en CCTV, estamos muy agradecidos por su valioso trabajo, continuaremos fortaleciendo esta gran alianza para alcanzar el crecimiento mutuo"</p>
+                                        <p>"Seted.co nos ha provisto de lo mejor en CCTV, estamos muy agradecidos por su trabajo, continuaremos fortaleciendo esta gran alianza para alcanzar el crecimiento mutuo"</p>
                                         <div class="h6 text-uppercase">CDA Ciudad Bonita</div>
                                     </div>
                                 </div>
@@ -454,8 +454,8 @@
                                 <div class="col-md-5">
                                     <address>
                                         <p>Estamos comprometidos en mantener contacto permanente con clientes, aliados y comunidad, nuestro equipo estará presto a atender cualquier solicitud.</p>
-                                        <p><b>Dirección:</b> Bucaramanga</p>
-                                        <p><b>Teléfono:</b> (057) 316 123 4455</p>
+                                        <p><b>Dirección:</b> Cra. 21C # 26B-39 Villa Campestre - Giron</p>
+                                        <p><b>Teléfono:</b> (057) 320 442 3487 / 318 774 0466</p>
                                         <p><b>Correo:</b> <a href="mailto:contacto@seted.co">contacto@seted.co</a></p>
                                     </address>
                                 </div>
